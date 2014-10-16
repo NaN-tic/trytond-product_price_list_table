@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- This file is part of the product_price_list_table module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Product Price List Table Start">
+    <label name="price_list"/>
+    <field name="price_list"/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="qty1"/>
+    <field name="qty1"/>
+    <label name="qty2"/>
+    <field name="qty2"/>
+    <label name="qty3"/>
+    <field name="qty3"/>
+    <label name="qty4"/>
+    <field name="qty4"/>
+    <label name="qty5"/>
+    <field name="qty5"/>
+</form>

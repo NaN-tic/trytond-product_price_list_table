@@ -1,0 +1,75 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:product.price.list.table.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.price.list.table.start,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:product.price.list.table.start,price_list:"
+msgid "PriceList"
+msgstr "Tarifa"
+
+msgctxt "field:product.price.list.table.start,qty1:"
+msgid "Quantity-1"
+msgstr "Cantidad 1"
+
+msgctxt "field:product.price.list.table.start,qty2:"
+msgid "Quantity-2"
+msgstr "Cantidad 2"
+
+msgctxt "field:product.price.list.table.start,qty3:"
+msgid "Quantity-3"
+msgstr "Cantidad 3"
+
+msgctxt "field:product.price.list.table.start,qty4:"
+msgid "Quantity-4"
+msgstr "Cantidad 4"
+
+msgctxt "field:product.price.list.table.start,qty5:"
+msgid "Quantity-5"
+msgstr "Cantidad 5"
+
+msgctxt "field:product.template,price_qty1:"
+msgid "Price Quantity-1"
+msgstr "Precio cantidad 1"
+
+msgctxt "field:product.template,price_qty2:"
+msgid "Price Quantity-2"
+msgstr "Precio cantidad 2"
+
+msgctxt "field:product.template,price_qty3:"
+msgid "Price Quantity-3"
+msgstr "Precio cantidad 3"
+
+msgctxt "field:product.template,price_qty4:"
+msgid "Price Quantity-4"
+msgstr "Precio cantidad 4"
+
+msgctxt "field:product.template,price_qty5:"
+msgid "Price Quantity-5"
+msgstr "Precio cantidad 5"
+
+msgctxt "model:ir.action,name:action_product_price_list_table"
+msgid "Product Price List Table"
+msgstr "Tabla tarifa producto"
+
+msgctxt "model:ir.action,name:wizard_product_price_list_table"
+msgid "Product Price List Table"
+msgstr "Tabla tarifa producto"
+
+msgctxt "model:product.price.list.table.start,name:"
+msgid "Product Price List Table Start"
+msgstr "Inicio tabla tarifa producto"
+
+msgctxt "wizard_button:product.price.list.table,start,done:"
+msgid "Ok"
+msgstr "Aceptar"
+
+msgctxt "wizard_button:product.price.list.table,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"

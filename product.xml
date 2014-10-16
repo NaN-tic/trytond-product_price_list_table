@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- This file is part of the product_price_list_table module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="product_price_list_table_start_view_form">
+            <field name="model">product.price.list.table.start</field>
+            <field name="type">form</field>
+            <field name="name">product_price_list_table_start_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_product_price_list_table">
+            <field name="name">Product Price List Table</field>
+            <field name="wiz_name">product.price.list.table</field>
+        </record>
+        <record model="ir.action.keyword" id="act_product_price_list_table">
+            <field name="keyword">form_action</field>
+            <field name="model">product.template,-1</field>
+            <field name="action" ref="wizard_product_price_list_table"/>
+        </record>
+
+        <record model="ir.ui.view" id="product_price_list_table_view_tree">
+            <field name="model">product.template</field>
+            <field name="type">tree</field>
+            <field name="name">product_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="action_product_price_list_table">
+            <field name="name">Product Price List Table</field>
+            <field name="res_model">product.template</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_product_price_list_table_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="product_price_list_table_view_tree"/>
+            <field name="act_window" ref="action_product_price_list_table"/>
+        </record>
+    </data>
+</tryton>
