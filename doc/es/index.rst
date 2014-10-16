@@ -1,5 +1,5 @@
 ==========================
-Producto. Tabla de tarifes
+Producto. Tabla de tarifas
 ==========================
 
 Añade un asistente para calcular las tarifas de determinados productos en función
