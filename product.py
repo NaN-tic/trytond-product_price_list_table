@@ -6,6 +6,8 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import PYSONEncoder
 from trytond.transaction import Transaction
 from trytond.wizard import Wizard, StateAction, StateView, Button
+from trytond.config import config as config_
+DIGITS = int(config_.get('digits', 'unit_price_digits', 4))
 
 __all__ = ['Template', 'ProductPriceListTableStart', 'ProductPriceListTable']
 __metaclass__ = PoolMeta
@@ -13,16 +15,16 @@ __metaclass__ = PoolMeta
 
 class Template:
     __name__ = 'product.template'
-    price_qty1 = fields.Function(fields.Integer('Price Quantity-1'),
-        'get_price_qty')
-    price_qty2 = fields.Function(fields.Integer('Price Quantity-2'),
-        'get_price_qty')
-    price_qty3 = fields.Function(fields.Integer('Price Quantity-3'),
-        'get_price_qty')
-    price_qty4 = fields.Function(fields.Integer('Price Quantity-4'),
-        'get_price_qty')
-    price_qty5 = fields.Function(fields.Integer('Price Quantity-5'),
-        'get_price_qty')
+    price_qty1 = fields.Function(fields.Numeric('Price Quantity-1',
+        digits=(16, DIGITS)), 'get_price_qty')
+    price_qty2 = fields.Function(fields.Numeric('Price Quantity-2',
+        digits=(16, DIGITS)), 'get_price_qty')
+    price_qty3 = fields.Function(fields.Numeric('Price Quantity-3',
+        digits=(16, DIGITS)), 'get_price_qty')
+    price_qty4 = fields.Function(fields.Numeric('Price Quantity-4',
+        digits=(16, DIGITS)), 'get_price_qty')
+    price_qty5 = fields.Function(fields.Numeric('Price Quantity-5',
+        digits=(16, DIGITS)), 'get_price_qty')
 
     @classmethod
     def get_price_qty(cls, templates, name):
