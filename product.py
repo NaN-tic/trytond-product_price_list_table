@@ -7,10 +7,11 @@ from trytond.pyson import PYSONEncoder
 from trytond.transaction import Transaction
 from trytond.wizard import Wizard, StateAction, StateView, Button
 from trytond.config import config as config_
-DIGITS = int(config_.get('digits', 'unit_price_digits', 4))
 
 __all__ = ['Template', 'ProductPriceListTableStart', 'ProductPriceListTable']
 __metaclass__ = PoolMeta
+
+DIGITS = config_.getint('product', 'price_decimal', default=4)
 
 
 class Template:
