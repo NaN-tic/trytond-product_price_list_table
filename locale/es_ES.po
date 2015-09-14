@@ -66,6 +66,14 @@ msgctxt "model:product.price.list.table.start,name:"
 msgid "Product Price List Table Start"
 msgstr "Inicio tabla tarifa producto"
 
+msgctxt "view:product.price.list.table.start:"
+msgid "Product Price List Table Start"
+msgstr "Inicio tabla tarifa producto"
+
+msgctxt "view:product.template:"
+msgid "Products"
+msgstr "Productos"
+
 msgctxt "wizard_button:product.price.list.table,start,done:"
 msgid "Ok"
 msgstr "Aceptar"
