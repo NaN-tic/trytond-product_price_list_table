@@ -28,28 +28,31 @@ class Template:
         digits=(16, DIGITS)), 'get_price_qty')
 
     @classmethod
-    def get_price_qty(cls, templates, name):
+    def get_price_qty(cls, templates, names):
         pool = Pool()
         PriceList = pool.get('product.price_list')
         Party = pool.get('party.party')
         Product = pool.get('product.product')
         context = Transaction().context
-        result = {t.id: None for t in templates}
         products = [p for t in templates for p in t.products]
-        if name in context and name in ('price_qty1', 'price_qty2',
-                'price_qty3', 'price_qty4', 'price_qty5'):
-            qty = context[name]
-            if qty:
-                price_list = PriceList(context['price_list'])
-                party = Party(context['party'])
-                prices = Product.get_sale_price(products, qty)
-                for template in templates:
-                    if template.products:
-                        product = template.products[0]
-                    else:
-                        continue
-                    result[template.id] = price_list.compute(party, product,
-                        prices[product.id], qty, product.default_uom)
+        result = {}
+        for name in names:
+            result[name] = {t.id: None for t in templates}
+            if name in context and name in ('price_qty1', 'price_qty2',
+                    'price_qty3', 'price_qty4', 'price_qty5'):
+                qty = context[name]
+                if qty:
+                    price_list = PriceList(context['price_list'])
+                    party = Party(context['party'])
+                    prices = Product.get_sale_price(products, qty)
+                    for template in templates:
+                        if template.products:
+                            product = template.products[0]
+                        else:
+                            continue
+                        result[name][template.id] = price_list.compute(party,
+                            product, prices[product.id], qty,
+                            product.default_uom)
         return result
 
 
