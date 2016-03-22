@@ -76,7 +76,7 @@ msgstr "Productes"
 
 msgctxt "wizard_button:product.price.list.table,start,done:"
 msgid "Ok"
-msgstr "Accepta"
+msgstr "D'acord"
 
 msgctxt "wizard_button:product.price.list.table,start,end:"
 msgid "Cancel"
