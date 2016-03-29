@@ -9,12 +9,12 @@ from trytond.wizard import Wizard, StateAction, StateView, Button
 from trytond.config import config as config_
 
 __all__ = ['Template', 'ProductPriceListTableStart', 'ProductPriceListTable']
-__metaclass__ = PoolMeta
 
 DIGITS = config_.getint('product', 'price_decimal', default=4)
 
 
 class Template:
+    __metaclass__ = PoolMeta
     __name__ = 'product.template'
     price_qty1 = fields.Function(fields.Numeric('Price Quantity-1',
         digits=(16, DIGITS)), 'get_price_qty')
