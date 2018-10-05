@@ -13,8 +13,7 @@ __all__ = ['Template', 'ProductPriceListTableStart', 'ProductPriceListTable']
 DIGITS = config_.getint('product', 'price_decimal', default=4)
 
 
-class Template:
-    __metaclass__ = PoolMeta
+class Template(metaclass=PoolMeta):
     __name__ = 'product.template'
     price_qty1 = fields.Function(fields.Numeric('Price Quantity-1',
         digits=(16, DIGITS)), 'get_price_qty')
