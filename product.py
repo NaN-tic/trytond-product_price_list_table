@@ -55,6 +55,10 @@ class Template(metaclass=PoolMeta):
         return result
 
 
+class Product(metaclass=PoolMeta):
+    __name__ = 'product.product'
+
+
 class ProductPriceListTableStart(ModelView):
     'Product Price List Table Start'
     __name__ = 'product.price.list.table.start'

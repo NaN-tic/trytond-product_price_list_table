@@ -7,6 +7,7 @@ from . import product
 def register():
     Pool.register(
         product.Template,
+        product.Product,
         product.ProductPriceListTableStart,
         module='product_price_list_table', type_='model')
     Pool.register(
